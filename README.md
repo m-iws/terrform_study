@@ -1,26 +1,26 @@
-# TerraformでAWSリソースを自動構築する
+# TerraformでAWSリソースを自動構築する<!-- omit in toc -->
 
-## 今回の目的
+## 今回の目的<!-- omit in toc -->
 
 初めてterraformを用いてAWSリソースを構築することに挑戦してみます。
 
 ---
 
-## 環境
+## 環境<!-- omit in toc -->
 
 Windows 11 Home<br>
 Gitは導入済み
 
 ---
 
-## Terraformとは
+## Terraformとは<!-- omit in toc -->
 
 HashiCorp社が提供するマルチクラウド対応のインフラ構成ツールです。<br>`.tf`という拡張子のファイルにHCL（HashiCorpConfigurationLanguage）という独自の言語で処理を記述することでインフラ環境を構築できます。<br>インフラの構成を宣言的に定義（コードで最終的な状態を指定する）することができます。<br>また、インフラの設定をコード管理できるので、デプロイと変更の履歴を確認することができます。<br>作成作業を自動化できるので時間短縮が望めるだけでなく、開発環境、テスト環境、本番環境間の不一致をなくすことができます。
 
 
 ---
 
-## 今回行うこと
+## 今回行うこと<!-- omit in toc -->
 
 今回作成するリソースの構成図です。<br>
 - CRUD処理ができる簡易なプログラムのシステム構成図を想定
@@ -30,24 +30,17 @@ HashiCorp社が提供するマルチクラウド対応のインフラ構成ツ�
 
 ---
 
-## 手順
+## 手順<!-- omit in toc -->
 
-- [TerraformでAWSリソースを自動構築する](#terraformでawsリソースを自動構築する)
-  - [今回の目的](#今回の目的)
-  - [環境](#環境)
-  - [Terraformとは](#terraformとは)
-  - [今回行うこと](#今回行うこと)
-  - [手順](#手順)
-    - [1. AWS CLIのインストール](#1-aws-cliのインストール)
-    - [2. AWSアクセスキーの作成](#2-awsアクセスキーの作成)
-    - [3. tfenvのインストール](#3-tfenvのインストール)
-    - [4. Terraformのインストール](#4-terraformのインストール)
-    - [5. S3の作成](#5-s3の作成)
-    - [6. Terraformの初期化](#6-terraformの初期化)
-    - [7. Terraformのコードの作成](#7-terraformのコードの作成)
-    - [8. Terraformの実行](#8-terraformの実行)
-    - [9. Terraformのクリーンアップ](#9-terraformのクリーンアップ)
-  - [工夫できた点と反省点](#工夫できた点と反省点)
+- [1. AWS CLIのインストール](#1-aws-cliのインストール)
+- [2. AWSアクセスキーの作成](#2-awsアクセスキーの作成)
+- [3. tfenvのインストール](#3-tfenvのインストール)
+- [4. Terraformのインストール](#4-terraformのインストール)
+- [5. S3の作成](#5-s3の作成)
+- [6. Terraformの初期化](#6-terraformの初期化)
+- [7. Terraformのコードの作成](#7-terraformのコードの作成)
+- [8. Terraformの実行](#8-terraformの実行)
+- [9. Terraformのクリーンアップ](#9-terraformのクリーンアップ)
 
 ### 1. AWS CLIのインストール
 
@@ -271,7 +264,7 @@ $ terraform destroy
 
 ---
 
-## 工夫できた点と反省点
+## 工夫できた点と反省点<!-- omit in toc -->
 
 - 複数人で開発する環境を想定し、`tfstateファイル`をS3に保存する構成としました。
 
